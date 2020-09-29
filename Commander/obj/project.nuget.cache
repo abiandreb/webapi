@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wRqXVA5bNHEOaZe0b7AD/CRCeZ9pCEZqk50/TPDdkQqFOmilX2CPlufU0NCxfnwqEbET3Ur+mE6W0lcwtR/8Vg==",
+  "dgSpecHash": "8B1JqT8Dem/HcPmcr+vyr6Ij1Xqcc43q/HgZwHqeZpsBNeR8ceZkRkRFIC3O/MbnVuIPyFfN7f5sqddjiZWUrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\andrew\\Desktop\\webapi\\Commander\\Commander.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\andrew\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
     "C:\\Users\\andrew\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
     "C:\\Users\\andrew\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.0\\microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512",
+    "C:\\Users\\andrew\\.nuget\\packages\\microsoft.extensions.configuration.commandline\\3.1.0\\microsoft.extensions.configuration.commandline.3.1.0.nupkg.sha512",
     "C:\\Users\\andrew\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.0\\microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512",
     "C:\\Users\\andrew\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.0\\microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512",
     "C:\\Users\\andrew\\.nuget\\packages\\microsoft.extensions.logging\\3.1.0\\microsoft.extensions.logging.3.1.0.nupkg.sha512",
