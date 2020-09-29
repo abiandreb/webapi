@@ -1,0 +1,6 @@
+C:\Users\andrew\Desktop\webapi\Commander\obj\Debug\netcoreapp5.0\Commander.csprojAssemblyReference.cache
+C:\Users\andrew\Desktop\webapi\Commander\obj\Debug\netcoreapp5.0\Commander.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andrew\Desktop\webapi\Commander\obj\Debug\netcoreapp5.0\Commander.AssemblyInfoInputs.cache
+C:\Users\andrew\Desktop\webapi\Commander\obj\Debug\netcoreapp5.0\Commander.AssemblyInfo.cs
+C:\Users\andrew\Desktop\webapi\Commander\obj\Debug\netcoreapp5.0\Commander.csproj.CoreCompileInputs.cache
+C:\Users\andrew\Desktop\webapi\Commander\obj\Debug\netcoreapp5.0\Commander.MvcApplicationPartsAssemblyInfo.cache
