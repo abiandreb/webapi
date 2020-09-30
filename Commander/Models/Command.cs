@@ -14,6 +14,7 @@ namespace Commander.Models
         public string Line { get; set; }
         [Required]
         public string Platform { get; set; }
+        
     }
 
 }
