@@ -30,10 +30,13 @@ namespace Commander
        
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection_string = Configuration.GetConnectionString("CommanderConnection");
-            connection_string = string.Format(connection_string, Environment.GetEnvironmentVariable("DB_HOST"),Environment.GetEnvironmentVariable("DB_LOGIN"),  Environment.GetEnvironmentVariable("DB_PASS"));
+            var host = Environment.GetEnvironmentVariable("DB_HOST");
+            var login = Environment.GetEnvironmentVariable("DB_LOGIN");
+            var pass = Environment.GetEnvironmentVariable("DB_PASS");
 
-            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString(connection_string)));
+            var connection_string = String.Format(Configuration.GetConnectionString("CommanderConnection"), host, login, pass);
+
+            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(connection_string));
             services.AddControllers().AddNewtonsoftJson(s => 
             {s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
