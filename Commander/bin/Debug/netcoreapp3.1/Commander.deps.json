@@ -32,6 +32,7 @@
           "Microsoft.EntityFrameworkCore": "3.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.0",
+          "Microsoft.Extensions.Configuration.CommandLine": "3.1.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -114,7 +115,7 @@
           "Microsoft.Extensions.Caching.Memory.Reference": "3.1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions.Reference": "3.1.0.0",
           "Microsoft.Extensions.Configuration.Binder.Reference": "3.1.0.0",
-          "Microsoft.Extensions.Configuration.CommandLine": "3.1.0.0",
+          "Microsoft.Extensions.Configuration.CommandLine.Reference": "3.1.0.0",
           "Microsoft.Extensions.Configuration.Reference": "3.1.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "3.1.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "3.1.0.0",
@@ -581,6 +582,11 @@
         }
       },
       "Microsoft.Extensions.Configuration.Binder/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.Configuration.CommandLine/3.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "3.1.0"
         }
@@ -1723,7 +1729,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Configuration.CommandLine/3.1.0.0": {
+      "Microsoft.Extensions.Configuration.CommandLine.Reference/3.1.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.CommandLine.dll": {}
         },
@@ -3038,6 +3044,13 @@
       "path": "microsoft.extensions.configuration.binder/3.1.0",
       "hashPath": "microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Configuration.CommandLine/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KDjz4HBw549oW4Y1eQAImAugCSYn84KXwgGZtgMqEwctvkdxZo0ObZC5QQI/YvX21U+DArR9+NfWZ3MxD9MhPA==",
+      "path": "microsoft.extensions.configuration.commandline/3.1.0",
+      "hashPath": "microsoft.extensions.configuration.commandline.3.1.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.DependencyInjection/3.1.0": {
       "type": "package",
       "serviceable": true,
@@ -3966,7 +3979,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Configuration.CommandLine/3.1.0.0": {
+    "Microsoft.Extensions.Configuration.CommandLine.Reference/3.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
