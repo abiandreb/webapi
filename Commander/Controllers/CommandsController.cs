@@ -24,7 +24,7 @@ namespace Commander.Controllers
         }
 
         
-        // Get api/command 
+        //Get api/commands 
         [HttpGet]
         public ActionResult <IEnumerable<CommandReadDto>> GetAllCommands()
         {
@@ -54,7 +54,7 @@ namespace Commander.Controllers
             
             var CommandReadDto = _mapper.Map<CommandReadDto>(commandModel);
 
-            return CreatedAtRoute(nameof(GetCommandById), new {Id = CommandReadDto.Id}, commandCreateDto);
+            return CreatedAtRoute(nameof(GetCommandById), new {Id = CommandReadDto.Id}, CommandReadDto);
 
         }
 
