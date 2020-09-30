@@ -10,11 +10,11 @@ namespace Commander.Migrations
                 name: "Commands",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    HowTo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Line = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Platform = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    HowTo = table.Column<string>(maxLength: 250, nullable: false),
+                    Line = table.Column<string>(nullable: false),
+                    Platform = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

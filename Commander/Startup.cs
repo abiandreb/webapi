@@ -14,7 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
-using Commander.Dtos;
+using Microsoft.OpenApi.Models;
+
 
 namespace Commander
 {
@@ -27,27 +28,38 @@ namespace Commander
 
         public IConfiguration Configuration { get; }
 
-       
+
         public void ConfigureServices(IServiceCollection services)
         {
-            var host = Environment.GetEnvironmentVariable("DB_HOST");
-            var login = Environment.GetEnvironmentVariable("DB_LOGIN");
-            var pass = Environment.GetEnvironmentVariable("DB_PASS");
+            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
+                (Configuration.GetConnectionString("CommanderConnection")));
 
-            var connection_string = String.Format(Configuration.GetConnectionString("CommanderConnection"), host, login, pass);
-
-            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(connection_string));
-            services.AddControllers().AddNewtonsoftJson(s => 
-            {s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            services.AddControllers().AddNewtonsoftJson(s => {
+                s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
+            
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
+
+            //ADDED AFTER TUTORIAL
+            services.AddSwaggerGen(c=> {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Commander API", Version = "v1" });
+            });
+
         }
 
-       
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //ADDED AFTER TUTORIAL
+            app.UseSwagger();
+
+            //ADDED AFTER TUTORIAL
+            app.UseSwaggerUI( c=> {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Commander API V1");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
